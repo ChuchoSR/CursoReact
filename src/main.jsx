@@ -13,8 +13,8 @@ import { CounterApp } from "./CounterApp";
 //Se usa el createroot que nos manda a buscar el id determinado en el index.html (es alli donde se renderiza nuestro componente),
 ReactDOM.createRoot(document.getElementById('root')).render(
     <React.StrictMode>
-        <CounterApp value= {123}/>
-
+        {/* <CounterApp value= {123}/> */}
+        <FirstApp />
     </React.StrictMode>
 );
 

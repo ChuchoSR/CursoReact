@@ -35,18 +35,19 @@
 
 
 import PropTypes from 'prop-types';
-export const FirstApp = ( {title, subTitle} ) => {
+export const FirstApp = ( {title, subTitle, name} ) => {
    // console.log(props);
 
    
     return (
       <>
       <h1>{ title }</h1>
-      <p>{subTitle}</p>
+      <p>{ subTitle }</p>
+      <p>{ name }</p>
       </>
     )
 
-}
+};
 
 //DE ESTA FORMA ESTAMOS CONDICIONANDO ALGO, EN ESTE CASO "title", tiene que ser un string, de no enviarse correctamente
 //LA CONSOLA DIRA INVALID PROP, PORQUE NO ES LO QUE ESPERABA
@@ -54,4 +55,14 @@ export const FirstApp = ( {title, subTitle} ) => {
 FirstApp.propTypes= {
   title: PropTypes.string.isRequired,
   subTitle: PropTypes.number.isRequired
+
+}
+
+FirstApp.defaultProps = {
+
+  name: 'Jesus Sierra',
+  subTitle: 'lee mas',
+  title: 'Se paciente y perseverante'
+
+
 }
